@@ -1,0 +1,116 @@
+/* 1.不要随便改css文件名字，html可能只认旧名字 */
+
+body{
+    color: rgb(184, 176, 198);
+}
+a{
+    text-shadow:0.1px 0.1px;
+}
+
+nav a{
+    color: rgb(207, 172, 172);
+}
+/* 上面这一段要记住写法 */
+
+nav{
+   border: 1px solid #ffe0b2;
+   background-color:#fff7e6;
+   border-radius: 12px;
+}
+
+p{
+    color: black;
+}
+
+p[id="ysdw"]{
+    background-color: bisque;
+}
+
+
+/* body header hgroup h1,body header hgroup p{
+      font-weight: 900;
+      color: blue;
+} */
+
+body header hgroup :is(h1,p){
+      font-weight: 900;
+      color: blue;
+}
+/* 以上两种写法明显第二种更简洁，但是要注意，第二种写法第一行冒号前面“空格”不能省 */
+/* 空格和>都指代某一元素的“后代”，但是空格可以跳级指代，>必须逐级指代 */
+
+label[for="原神等级"]{                        
+     color: rgb(145, 73, 218);              
+
+}                                  
+select[id="原神等级"]{
+    color: rgb(78, 211, 34);
+}
+
+/* 注意上面两段的写法，很值得记忆，因为课程里没有 */
+
+input[value="重置"],input[type="button"]{
+    background-color: rgb(124, 35, 208);
+    color: white;                       
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* 上面这段神了      我这里是不是能这么理解，css的选中，只要这个标签能证明它独树与这行代码就行了，比方说第24行，我写value=或者type="reset"都可以 */
+
+.livs{
+    text-indent: 7px;
+}
+
+#dqgjzt{
+    text-align: center;
+    font-family: 'KaiTi', 'Microsoft YaHei', sans-serif;
+    line-height: 1.7;
+}
+
+
+/* #dqgjzt thead th{
+    color: blue;
+} */
+
+/* table[id="dqgjzt"]>thead>tr>th{
+    color: rgb(24, 24, 188);
+} */
+
+table[id="dqgjzt"] thead th{
+    color: rgb(24, 24, 188);
+}
+
+/* 注意看上面这三个写法，我在第三个写的时候又是在[]后面忘记加一个空格了，最推荐第三个 */
+#dqgjzt tbody th{
+    color: brown;
+}
+/* 上面的tbody有没有作用？ */
+
+div[class="livs"]{
+    background-image: url(images/迪卢克.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+     
+
+
+
+
+
+
+
+
+
+div[class="hyly"]{
+    color: black;
+}
+div[class="hyly"]:hover{
+    color: blue;
+}
+/* 老实讲这里我并不扎实 */
